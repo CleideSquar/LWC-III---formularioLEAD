@@ -1,0 +1,16 @@
+<template>
+    <!-- Este é o componente de formulário de Lead -->
+    <lightning-card title="Formulário Lead">
+        <div class="slds-p-around_medium">
+            <!-- Campos de entrada do formulário -->
+            <lightning-input label="Primeiro Nome" name="firstName" onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Sobrenome" name="lastName" onchange={handleInputChange}></lightning-input>
+            <lightning-input label="E-mail" name="email" onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Website" name="website" onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Empresa" name="company" onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Receita Anual" name="revenue" onchange={handleInputChange}></lightning-input><br>
+            <!-- Botão de criação de Lead -->
+            <lightning-button variant="brand" label="Criar Lead" onclick={onSpread}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
