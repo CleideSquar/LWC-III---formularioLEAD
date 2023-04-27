@@ -1,18 +1,16 @@
-# Salesforce DX Project: Next Steps
+# Formulário Lead
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Esse é um componente de formulário para a criação de **Leads** em **Lightning Web Components (LWC).** É exibido na interface do usuário como um card do Lightning com campos de entrada para o primeiro nome, sobrenome, email, website, empresa e receita anual. Há um botão de criação de Lead que, quando clicado, dispara o método onSpread.
 
-## How Do You Plan to Deploy Your Changes?
+O método **handleInputChange** é executado toda vez que o valor de um dos campos de entrada é alterado. Ele atualiza o valor correspondente no objeto inputs do componente.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+O método **onSpread** cria um novo array adicionando os valores do array original e os valores 4, 5 e 6. Em seguida, ele cria outro novo array adicionando os valores 1, 2 e 3 e os valores do array original. O array original é definido no método **connectedCallback.**
 
-## Configure Your Salesforce DX Project
+O método **connectedCallback** é um dos ciclos de vida do componente LWC. Ele é executado assim que o componente é conectado à árvore DOM e cria o array original. Em seguida, chama o método onSpread para espalhar os valores do array original em novos arrays.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+Em resumo, este componente é um formulário simples para criação de Leads que atualiza valores em um objeto inputs e cria novos arrays a partir de um array original.
 
-## Read All About It
+## Atividade elabora para o curso da SoulCode
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+2 - (input-object-spread)
+Crie um componente LWC, que contenha os campos: primeironome, sobrenome, email, website, empresa, receita anual e através de uma única função (handleInputChange) monte o objeto com os dados estruturados.
